@@ -18,16 +18,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install Gramax CLI
-        run: npm install -g @gramax/cli
-
-      - name: Build site
-        run: gramax build --source . --destination ./dist
+      - name: Prepare static files
+        run: |
+          mkdir dist
+          cp -r ./* dist/
+          cp .doc-root.yaml dist/ || true
+          cp .nojekyll dist/ || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
