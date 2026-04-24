@@ -18,15 +18,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare static files
-        run: |
-          rm -rf dist
-          mkdir dist
-          rsync -av \
-            --exclude='.git' \
-            --exclude='.github' \
-            --exclude='dist' \
-            ./ dist/
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Gramax CLI
+        run: npm install -g gramax-cli
+
+      - name: Build Gramax site
+        run: gramax-cli build --source . --destination ./dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
