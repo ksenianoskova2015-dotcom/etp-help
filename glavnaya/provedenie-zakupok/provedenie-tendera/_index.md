@@ -185,7 +185,7 @@ title: Проведение Тендера
 
 При возникновении вопросов:
 
--  обратитесь в[ техническую поддержку](./../../../kontaktnye-dannye-tekhnicheskoy-podderzhki)
+-  обратитесь в[ техническую поддержку](./../../kontaktnye-dannye-tekhnicheskoy-podderzhki)
 
 -  или к администратору площадки
 
