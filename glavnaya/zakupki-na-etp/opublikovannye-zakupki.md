@@ -3,6 +3,12 @@ order: 1
 title: Опубликованные закупки
 ---
 
+## Видео-инструкция 
+
+[video:https://youtu.be/D7Ql7dI-0r8]
+
+
+
 ## Главная страница - лендинг
 
 ![](./opublikovannye-zakupki.png){width=2001px height=1098px}
